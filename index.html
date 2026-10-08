@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#153247">
+  <meta name="description" content="Explore the SCSASM 2026 scientific program across April 17–19 by date, room, track, speaker and presentation.">
+  <title>SCSASM 2026 | Interactive Scientific Program</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#program-title">Skip to scientific program</a>
+
+  <header class="site-header">
+    <div class="header-inner page-width">
+      <div class="brand" aria-label="SCSASM 2026">
+        <span class="brand-rule" aria-hidden="true"></span>
+        <span class="brand-name">SCSASM <span class="brand-year">2026</span></span>
+        <span class="brand-caption">Scientific Program</span>
+      </div>
+      <div class="header-date"><span class="header-date-dot" aria-hidden="true"></span> 17—19 April 2026</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero page-width" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> SCSASM 2026 · Interactive Agenda</p>
+        <h1 id="hero-title">The scientific<br><em>program.</em></h1>
+        <p class="hero-intro">Three days of sessions, research and discussion. Find your way through the program by time, room, topic and speaker.</p>
+      </div>
+      <div class="hero-aside" aria-hidden="true">
+        <div class="hero-aside-top">PROGRAM OVERVIEW <span>2026</span></div>
+        <div class="hero-number"><span>17</span><span class="hero-slash">/</span><span>19</span></div>
+        <div class="hero-aside-bottom"><span>APRIL</span><span>EXPLORE BELOW <span class="down-arrow">↘</span></span></div>
+      </div>
+    </section>
+
+    <section class="program-section" aria-labelledby="program-title">
+      <div class="page-width">
+        <div class="program-heading">
+          <div>
+            <p class="eyebrow eyebrow-small">BUILD YOUR PROGRAM</p>
+            <h2 id="program-title">Explore the agenda</h2>
+            <p class="program-subtitle">Sessions run vertically by time, with rooms displayed side by side.</p>
+          </div>
+          <div id="sourceBadge" class="source-badge" role="status" aria-live="polite"><span class="source-dot"></span><span id="sourceBadgeText">Loading schedule…</span></div>
+        </div>
+
+        <div id="sourceNotice" class="notice" role="status" aria-live="polite" hidden></div>
+        <div id="fatalError" class="fatal-error" role="alert" hidden>
+          <div><strong>We couldn't load the program.</strong><p id="fatalErrorText">Check your connection and try again.</p></div>
+          <button id="retryButton" class="button button-primary" type="button">Retry loading</button>
+        </div>
+
+        <div class="date-tabs" role="tablist" aria-label="Conference day">
+          <button type="button" class="date-tab" role="tab" id="tab-2026-04-17" aria-label="Friday, April 17, 2026" aria-controls="timelineScroll" aria-selected="true" tabindex="0" data-date="2026-04-17">
+            <span class="tab-day">Friday</span><span class="tab-date">April 17, 2026</span><span class="tab-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button type="button" class="date-tab" role="tab" id="tab-2026-04-18" aria-label="Saturday, April 18, 2026" aria-controls="timelineScroll" aria-selected="false" tabindex="-1" data-date="2026-04-18">
+            <span class="tab-day">Saturday</span><span class="tab-date">April 18, 2026</span><span class="tab-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button type="button" class="date-tab" role="tab" id="tab-2026-04-19" aria-label="Sunday, April 19, 2026" aria-controls="timelineScroll" aria-selected="false" tabindex="-1" data-date="2026-04-19">
+            <span class="tab-day">Sunday</span><span class="tab-date">April 19, 2026</span><span class="tab-arrow" aria-hidden="true">↗</span>
+          </button>
+        </div>
+
+        <div class="toolbar" aria-label="Search and filter the program">
+          <div class="search-wrap">
+            <span class="search-icon" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10.8" cy="10.8" r="6.7"></circle><path d="m16 16 5 5"></path></svg></span>
+            <label class="sr-only" for="programSearch">Search sessions, speakers, presentations</label>
+            <input id="programSearch" type="search" spellcheck="false" autocomplete="off" placeholder="Search sessions, speakers, presentations...">
+            <button type="button" id="clearSearch" class="search-clear" aria-label="Clear search" hidden>×</button>
+          </div>
+          <div class="filter-controls">
+            <div class="filter-dropdown" id="trackDropdown">
+              <button type="button" class="filter-button" id="trackToggle" aria-expanded="false" aria-controls="trackOptions" aria-haspopup="true"><span class="filter-button-text">Track</span><span id="trackCount" class="filter-counter" hidden>0</span><span class="chevron" aria-hidden="true"></span></button>
+              <div class="filter-menu" id="trackOptions" role="group" aria-label="Filter by track" hidden><div class="filter-menu-heading">Select tracks <span>Multiple allowed</span></div><div id="trackChoices" class="filter-choices"></div></div>
+            </div>
+            <div class="filter-dropdown" id="roomDropdown">
+              <button type="button" class="filter-button" id="roomToggle" aria-expanded="false" aria-controls="roomOptions" aria-haspopup="true"><span class="filter-button-text">Room</span><span id="roomCount" class="filter-counter" hidden>0</span><span class="chevron" aria-hidden="true"></span></button>
+              <div class="filter-menu" id="roomOptions" role="group" aria-label="Filter by room" hidden><div class="filter-menu-heading">Select rooms <span>Multiple allowed</span></div><div id="roomChoices" class="filter-choices"></div></div>
+            </div>
+            <button id="clearFilters" class="clear-filters" type="button">Clear filters <span aria-hidden="true">↺</span></button>
+          </div>
+        </div>
+
+        <div class="agenda-meta">
+          <p id="resultsSummary" class="results-summary" role="status" aria-live="polite">Loading the agenda…</p>
+          <p class="scroll-hint"><span class="scroll-hint-icon" aria-hidden="true">↔</span> Scroll to explore rooms <span class="meta-separator" aria-hidden="true">·</span> Times shown as published</p>
+        </div>
+
+        <div id="loadingState" class="loading-state" role="status" aria-live="polite"><span class="loading-spinner" aria-hidden="true"></span> Preparing the timeline…</div>
+        <div id="timelineWrapper" hidden>
+          <div id="timelineScroll" class="timeline-scroll" role="region" aria-label="Time and room schedule, scroll horizontally and vertically" tabindex="0" aria-labelledby="program-title">
+            <div id="timelineGrid" class="timeline-grid"></div>
+          </div>
+          <div class="timeline-caption"><span>TIME <span class="caption-divider">/</span> ROOM VIEW</span><span>Choose any session for full details <span aria-hidden="true">↗</span></span></div>
+        </div>
+        <div id="emptyFeedback" class="empty-feedback" role="status" hidden>
+          <div class="empty-icon" aria-hidden="true">⌕</div>
+          <h3>No sessions match</h3>
+          <p>Try another search or remove a track or room filter. Your selected day will remain unchanged.</p>
+          <button class="button button-primary" type="button" id="emptyClear">Clear search and filters</button>
+        </div>
+        <section id="unscheduledSection" class="unscheduled" aria-labelledby="unscheduledTitle" hidden>
+          <h3 id="unscheduledTitle">Sessions without valid times</h3>
+          <p>These source records cannot be placed on the timed grid, but their details remain available.</p>
+          <div id="unscheduledCards" class="unscheduled-cards"></div>
+        </section>
+        <p class="filter-help">Filter tip: selecting multiple options within a category shows any of them; Track and Room selections work together. Leaving a category empty shows all of its values, including sessions without a track.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="page-width footer-inner"><span>SCSASM <strong>2026</strong></span><span>Program details are drawn from the published spreadsheet or a dated local fallback. Please verify last-minute changes with the organisers.</span></div></footer>
+
+  <div id="detailLayer" class="detail-layer" hidden>
+    <div class="detail-backdrop" id="detailBackdrop" aria-hidden="true"></div>
+    <aside class="detail-panel" id="detailPanel" role="dialog" aria-modal="true" aria-labelledby="detailTitle" aria-describedby="detailContext" tabindex="-1">
+      <div class="detail-topbar"><span class="detail-label">SESSION INFORMATION <span class="detail-label-arrow">↗</span></span><button type="button" id="detailClose" class="detail-close" aria-label="Close session details">×</button></div>
+      <div id="detailContents" class="detail-contents"></div>
+    </aside>
+  </div>
+  <noscript><div class="no-js">This agenda requires JavaScript. Please enable JavaScript and refresh the page to explore the program.</div></noscript>
+</body>
+</html>
